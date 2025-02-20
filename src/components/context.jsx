@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const PersonalInfo= createContext();
-const Education=createContext();
-const Experience=createContext();
+const EducationInfo=createContext();
+const ExperienceInfo=createContext();
 
-export {PersonalInfo, Education, Experience};
+export {PersonalInfo, EducationInfo, ExperienceInfo};
