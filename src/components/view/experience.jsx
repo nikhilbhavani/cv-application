@@ -10,7 +10,7 @@ function Experience() {
       <Content
       startDate={form.startDate}
       endDate={form.endDate}
-      adress={form.location}
+      address={form.location}
       title={form.company}
       info={form.position}
       key={form.key}

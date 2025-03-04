@@ -1,0 +1,61 @@
+.viewerContent {
+    background-color: var(--white-color);
+    aspect-ratio : 1 / 1.414;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+}
+
+.header {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    height: 14rem;
+
+    padding: 3rem;
+    background-color: var(--header-background-color);
+    color: var(--white-color);
+}
+
+.contactInfo {
+    display: flex;
+    gap: 3rem;
+
+    & span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+     path {
+        fill: var(--white-color)
+     }
+}
+
+.viewerContainer {
+    margin: 2rem 5rem;
+    display: grid;
+    justify-content: auto;
+
+    & h2 {
+        text-align: center;
+        color: var(--main-color);
+        background-color: var(--main-gray-color);
+        
+    }
+}
+
+.cvContent {
+    margin: 16px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+
+    & .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.dummy {
+    height: auto;
+}

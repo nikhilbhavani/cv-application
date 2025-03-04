@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Viewer } from "./components/view/main";
+import { Editor } from "./components/edit/main";
+
+import { useState } from "react";
+import { PersonalInfo } from "./components/context";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState({
+    personalForm: {
+      fullname: "Nikhil Kumar Bhavani",
+      email: "Nikhil Kumar Bhavani",
+      phone: "+1 864 921 5441",
+      address: "1064, Norfolk, VA 23508",
+    },
+    education: [
+      {
+        startDate: 2018,
+        endDate: 2022,
+        school: "Mahindra Ecole Centrale",
+        degree: "Bachelor of Technology in Mechanical Engineering",
+        address:
+          "Hyderabad, Telangana, India",
+        show: true,
+        key: 0,
+      },
+      {
+        startDate: 2022,
+        endDate: 2024,
+        school: "Old Dominion University",
+        degree: "Masters of Science, Computer Science",
+        address:
+          "Norfolk, VA",
+        show: false,
+        key: 1,
+      },
+    ],
+    experience: [
+      {
+        company: "",
+        position: "",
+        startDate: "",
+        endDate: "",
+        location: "",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi praesentium eius eveniet, veritatis omnis ducimus molestias, esse quam recusandae hic dolore, qui maxime consequatur repellat nesciunt earum eum? Maxime, esse!",
+        show: true,
+        key: 0,
+      },
+    ],
+    educationFormState: 0,
+    experienceFormState: 0,
+  });
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <PersonalInfo.Provider value={[state, setState]}>
+      <div className="container">
+        <Editor />
+        <Viewer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </PersonalInfo.Provider>
+  );
 }
 
-export default App
+export default App;

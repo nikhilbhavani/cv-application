@@ -11,7 +11,7 @@ function Education(){
           <Content
           startDate={form.startDate}
           endDate={form.endDate}
-          adress={form.location}
+          address={form.location}
           title={form.school}
           info={form.degree}
           key={form.key}

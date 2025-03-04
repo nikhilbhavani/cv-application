@@ -28,9 +28,9 @@ function Personal(){
         />
         <InputContent
           form="personalForm"
-          name="Adress"
+          name="Address"
           type="text"
-          id="adress"
+          id="address"
           placeholder="Norfolk VA 23508"
         />
       </form>

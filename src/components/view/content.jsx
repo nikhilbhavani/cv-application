@@ -1,4 +1,4 @@
-function Content({ startDate, endDate, adress, title, info, description }) {
+function Content({ startDate, endDate, address, title, info, description }) {
     let descriptionDiv
     if (description) {
       descriptionDiv = <p>{description}</p>
@@ -9,7 +9,7 @@ function Content({ startDate, endDate, adress, title, info, description }) {
           <p>
             {startDate} - {endDate}
           </p>
-          <p>{adress}</p>
+          <p>{address}</p>
         </div>
         <div>
           <p className="title">{title}</p>
